@@ -158,12 +158,17 @@ function New-GitHubRelease {
     git push origin $Tag
     
     # Try GitHub CLI first
-    $ghCmd = "gh release create '$Tag' --title 'Rain $Tag' --notes '$Notes'"
-    $uploadFiles = Get-ChildItem "$BUILD_DIR/*.zip", "$BUILD_DIR/*.tar.gz" | ForEach-Object { "--attach '$($_.FullName)'" }
-    $ghCmd += " $($uploadFiles -join ' ')"
+    $tempNotesFile = "temp-release-notes.md"
+    $Notes | Out-File -FilePath $tempNotesFile -Encoding UTF8
+    
+    $uploadFiles = Get-ChildItem "$BUILD_DIR/*.zip", "$BUILD_DIR/*.tar.gz" | ForEach-Object { "'$($_.FullName)'" }
+    $ghCmd = "gh release create '$Tag' --title 'Rain $Tag' --notes-file '$tempNotesFile' $($uploadFiles -join ' ')"
     
     Write-ColorOutput "Running: $ghCmd" "Cyan"
     Invoke-Expression $ghCmd
+    
+    # Clean up temp file
+    Remove-Item $tempNotesFile -ErrorAction SilentlyContinue
     
     if ($LASTEXITCODE -ne 0) {
         Write-ColorOutput "GitHub CLI failed. Please install GitHub CLI (gh) or create release manually." "Red"
