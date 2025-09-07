@@ -34,3 +34,7 @@ Run the program to display animated rain. Press Ctrl+C to exit.
 ## Releases
 
 - **v1.0.0** - Initial release with cross-platform builds for Windows, Linux, macOS, and Android
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
