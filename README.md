@@ -1,5 +1,8 @@
 # Rain
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/Cod-e-Codes/rain)](https://goreportcard.com/report/github.com/Cod-e-Codes/rain)
+[![CI](https://github.com/Cod-e-Codes/rain/actions/workflows/ci.yml/badge.svg)](https://github.com/Cod-e-Codes/rain/actions/workflows/ci.yml)
+
 A Go program that displays animated rain falling from clouds in the terminal.
 
 <img src="rain-demo.gif" width="400" alt="Rain Demo">
