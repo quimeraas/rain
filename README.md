@@ -36,6 +36,7 @@ Run the program to display animated rain. Press Ctrl+C to exit.
 
 ## Releases
 
+- **v1.0.1** - Fixed deprecated rand.Seed usage and improved CI workflow
 - **v1.0.0** - Initial release with cross-platform builds for Windows, Linux, macOS, and Android
 
 ## License
