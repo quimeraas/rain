@@ -1,3 +1,3 @@
-module rain
+module github.com/Cod-e-Codes/rain
 
 go 1.25.1
