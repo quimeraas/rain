@@ -2,6 +2,8 @@
 
 A Go program that displays animated rain falling from clouds in the terminal.
 
+<img src="rain-demo.gif" width="400" alt="Rain Demo">
+
 ## Requirements
 
 Go 1.11 or later
