@@ -10,6 +10,10 @@ Go 1.11 or later
 
 ## Installation
 
+### Pre-built Binaries (Recommended)
+Download the latest release from [GitHub Releases](https://github.com/Cod-e-Codes/rain/releases/latest) and extract the appropriate binary for your platform.
+
+### From Source
 ```bash
 git clone https://github.com/Cod-e-Codes/rain.git
 cd rain
@@ -26,3 +30,7 @@ Run the program to display animated rain. Press Ctrl+C to exit.
 - 60% probability of rain at each position
 - 200ms frame delay
 - Clears screen between frames
+
+## Releases
+
+- **v1.0.0** - Initial release with cross-platform builds for Windows, Linux, macOS, and Android
