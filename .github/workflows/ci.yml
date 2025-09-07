@@ -63,7 +63,7 @@ jobs:
         go build -ldflags='-s -w' -o rain${{ matrix.goos == 'windows' && '.exe' || '' }} .
     
     - name: Upload build artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: rain-${{ matrix.goos }}-${{ matrix.goarch }}
         path: rain${{ matrix.goos == 'windows' && '.exe' || '' }}
