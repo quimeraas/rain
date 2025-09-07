@@ -47,7 +47,6 @@ func generateCloudWithRain() []string {
 }
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
 	for {
 		fmt.Print("\033[H\033[2J") // clear screen
 
