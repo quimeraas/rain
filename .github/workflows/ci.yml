@@ -65,7 +65,7 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
-        name: rain-${{ matrix.goos }}-${{ matrix.goarch }}-${{ github.run_id }}
+        name: rain-${{ matrix.goos }}-${{ matrix.goarch }}-${{ github.run_number }}-${{ matrix.os }}
         path: rain${{ matrix.goos == 'windows' && '.exe' || '' }}
 
   lint:
